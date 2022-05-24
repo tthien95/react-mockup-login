@@ -18,12 +18,12 @@ export const AuthContextProvider = (props) => {
   }, []);
 
   const logoutHandler = () => {
-    localStorage.setItem('isLoggedIn', '1');
+    localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
 
   const loginHandler = () => {
-    localStorage.removeItem('isLoggedIn');
+    localStorage.setItem('isLoggedIn', '1');
     setIsLoggedIn(true);
   };
 
